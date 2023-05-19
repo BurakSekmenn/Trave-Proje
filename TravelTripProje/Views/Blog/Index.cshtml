@@ -64,10 +64,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="recent">
                         <h3>SON BLOGLAR</h3>
                         <ul>
-                            <li><a href="#">Aliquam tincidunt mauris</a></li>
-                            <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                            <li><a href="#">Nunc dignissim risus consecu</a></li>
-                            <li><a href="#">Cras ornare tristiqu</a></li>
+                            @foreach (var m in Model.Deger3)
+                            {
+                                <li><a href="/Blog/BlogDetay/@m.ID">@m.Baslik</a></li>
+                            }
+
                         </ul>
                     </div>
                     <div class="comments">
