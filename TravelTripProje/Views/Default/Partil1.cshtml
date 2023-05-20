@@ -1,38 +1,25 @@
-﻿<div class="container">
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+<div class="container">
     <div class="row">
-        <div class="col-sm">           
+        @foreach(var x in Model)
+            {
+        <div class="col-sm-4">
             <div class="bot-left">
-                <img src="~/web/images/pic1.jpg" alt="" />
+                <img src="~/web2/images/@x.BlogImage" alt="" />
             </div>
             <div class="left-text">
-                <h4>Lorem ipsum dolor sit amet, conte adipiscing elit dolor sit amet</h4>
-                <span class="doller">$900.99</span>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
-                <p><a href="#"><span class="read">Read More >></span></a></p>
+                <h4>@x.Baslik</h4>
+                <span class="doller">@x.Tarih.ToString("dd/MM/yyyy")</span>
+                <p>@x.Aciklama.Substring(0,80)</p>
+                <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamanı Oku >></span></a></p>
             </div>
         </div>
-        <div class="col-sm">
-            <div class="bot-left">
-                <img src="~/web/images/pic1.jpg" alt="" />
-            </div>
-            <div class="left-text">
-                <h4>Lorem ipsum dolor sit amet, conte adipiscing elit dolor sit amet</h4>
-                <span class="doller">$900.99</span>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
-                <p><a href="#"><span class="read">Read More >></span></a></p>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="bot-left">
-                <img src="~/web/images/pic1.jpg" alt="" />
-            </div>
-            <div class="left-text">
-                <h4>Lorem ipsum dolor sit amet, conte adipiscing elit dolor sit amet</h4>
-                <span class="doller">$900.99</span>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
-                <p><a href="#"><span class="read">Read More >></span></a></p>
-            </div>
-        </div>
+            }
+        
+        
+        
+       
     </div>
 </div>
 

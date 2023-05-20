@@ -248,6 +248,8 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\BlogDetay.cshtml" />
     <Content Include="Views\Default\Partil1.cshtml" />
+    <Content Include="Views\Default\Partil3.cshtml" />
+    <Content Include="Views\Default\Partil4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

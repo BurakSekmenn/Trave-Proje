@@ -24,6 +24,7 @@ namespace TravelTripProje.Controllers
         {
             //var blogbul = c.Blogs.Where(m => m.ID == id).ToList();
             by.Deger1 = c.Blogs.Where(x => x.ID == id).ToList();
+            //by.Deger1 = c.Blogs.OrderByDescending(x => x.ID==id).ToList();
             by.Deger2 = c.yorumlars.Where(x => x.Blogid == id).ToList();
             return View(by);
         }

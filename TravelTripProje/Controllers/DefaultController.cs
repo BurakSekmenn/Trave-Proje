@@ -13,7 +13,7 @@ namespace TravelTripProje.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler = c.Blogs.ToList();
+            var degerler = c.Blogs.Take(3).ToList();
             return View(degerler);
         }
         public ActionResult About()
@@ -22,7 +22,19 @@ namespace TravelTripProje.Controllers
         }
         public PartialViewResult Partil1()
         {
-            return PartialView();
+            var deger = c.Blogs.Take(3).ToList();
+            return PartialView(deger);
         }
+        public PartialViewResult Partil3()
+        {
+            var deger = c.Blogs.ToList();
+            return PartialView(deger);
+        }
+        public PartialViewResult Partil4()
+        {
+            var deger = c.yorumlars.Take(2).ToList();
+            return PartialView(deger);
+        }
+
     }
 }
