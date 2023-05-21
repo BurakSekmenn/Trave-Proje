@@ -255,6 +255,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\BlogEkle.cshtml" />
     <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Default\Partil5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

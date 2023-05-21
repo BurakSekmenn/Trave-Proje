@@ -32,7 +32,13 @@ namespace TravelTripProje.Controllers
         }
         public PartialViewResult Partil4()
         {
-            var deger = c.yorumlars.Take(2).ToList();
+            var deger = c.Blogs.Take(3).ToList();
+            return PartialView(deger);
+        }
+        public PartialViewResult Partil5()
+        {
+            //by.Deger3 = c.Blogs.OrderByDescending(b => b.ID).Take(3).ToList();
+            var deger = c.Blogs.OrderByDescending(b => b.ID).Take(3).ToList();
             return PartialView(deger);
         }
 
