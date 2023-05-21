@@ -1,0 +1,35 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+
+<div class="box1-left">
+    @foreach (var x in Model)
+    {
+        <div class="bot-img">
+            <img src="~/web2/images/@x.BlogImage" style="width:150px; height:90px;" alt="" />
+        </div>
+        <div class="bot-desc1">
+            <p>@x.Aciklama.Substring(0,50)</p>
+        </div>
+        <div class="clear"></div>
+
+    }
+
+
+
+</div>
+
+
+@*<div class="box1-left">
+        @foreach (var x in Model)
+                    {
+
+            <div class="bot-img">
+                <img src="~/web2/images/@x.BlogImage" style="width:572px; height:90px;" alt="" />
+            </div>
+            <div class="bot-desc1">
+                <p>@x.Aciklama.Substring(0,50)</p>
+            </div>
+
+                    }
+    </div>*@
+
