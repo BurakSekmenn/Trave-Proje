@@ -1,0 +1,35 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<yorumlar>
+@{
+    ViewBag.Title = "YorumListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:15px; ">
+    <tr>
+        <th>ID</th>
+        <th>BASLIK</th>
+        <th>İŞLEMLER</th>
+    </tr>
+
+    @foreach (var i in Model)
+
+    {
+        <tr>
+            <td>@i.ID</td>
+            <td>@i.KullaniciAdi</td>
+            <td>@i.Mail</td>
+            <td>@i.Yorum</td>
+            <td>@i.Blogid</td>
+            <td>
+                <a href="/Admin/YorumSil/@i.ID" class="btn btn-danger">Sil </a>
+                <a href="/Admin/YorumGuncelle/@i.ID" class="btn btn-warning">Güncelle </a>
+                <a href="@i.ID" class="btn btn-success">Detay </a>
+
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="...." class="btn btn-primary">Yeni Blog Ekle Paşam</a>
+
