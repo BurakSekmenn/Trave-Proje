@@ -35,5 +35,10 @@ namespace TravelTripProje.Controllers
                 return View();
             }
         }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "GirisYap");
+        }
     }
 }
